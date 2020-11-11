@@ -1,0 +1,26 @@
+.title {
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.title::after {
+    content: "";
+    height: 5px;
+    display: block;
+    background-color: #C26246;
+    margin: 7px auto 0;
+    border-radius: 5px;
+    animation: titleLine 1s forwards;
+}
+
+@keyframes titleLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
