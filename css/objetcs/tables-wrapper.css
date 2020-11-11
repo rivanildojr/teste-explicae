@@ -1,0 +1,24 @@
+.tables-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    width: 80%;
+    animation: appearance 1.5s forwards;
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 40rem) {
+    .tables-wrapper {
+        width: 100%;
+    }
+}

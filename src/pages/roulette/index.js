@@ -1,27 +1,18 @@
-const getRandon = (min, max) => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const $roulette = document.querySelector("#roulette");
 
-const generateArrayRandon = () => {
-    let sixDozen = new Set();
+const $tablesWrapper = createTablesWrapper();
+const $title = createTitle("MegaSena");
+const $button = createButtonHome();
 
-    while(sixDozen.size < 6) {
-        let number = getRandon(1, 60);
-        sixDozen.add(number);
+const generateTables = (quantity) => {
+    for(let i = 0; i < quantity; i++) {
+        let $createTable = generateTable(6, 10);
+        $tablesWrapper.insertAdjacentElement("beforeend", $createTable);
     }
-
-    return [...sixDozen];
 }
 
-const sortAscending = (arrayNumber) => {
-    return arrayNumber.sort((a, b) => a - b);
-}
+generateTables(3);
 
-const generateArrayRandonAscending = () => {
-    let arrayNumber = generateArrayRandon();
-    return sortAscending(arrayNumber);
-}
-
-console.log(generateArrayRandonAscending());
+$roulette.insertAdjacentHTML("beforeend", $title);
+$roulette.insertAdjacentElement("beforeend", $tablesWrapper);
+$roulette.insertAdjacentHTML("beforeend", $button);

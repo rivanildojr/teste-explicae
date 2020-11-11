@@ -2,11 +2,16 @@ body {
     background-color: #2E2F34;
 }
 
-#root {
+#root, #roulette {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
+    padding: 2rem;
+}
+
+#roulette {
+    overflow: auto;
 }
