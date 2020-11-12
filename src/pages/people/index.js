@@ -4,16 +4,16 @@ const $tableWrapper = createTablesWrapper();
 const $title = createTitle("Pessoas Randômicas");
 const $button = createButtonHome();
 
-function USER_GET() {
+function USER_GET(results) {
   return {
-    url: `https://randomuser.me/api`,
+    url: `https://randomuser.me/api/?results=${results}`,
     options: {
       method: "GET",
     },
   };
 }
 
-const {url, options} = USER_GET();
+const {url, options} = USER_GET(5);
 
 const getUser = async () => {
     const dataResponse = await fetch(url, options);
@@ -25,8 +25,10 @@ const getUser = async () => {
 const generateTable = async () => {
     try {
         const data = await getUser();       
-        const $tablePeople = createTablePeople({...data.results[0]});
-        $tableWrapper.insertAdjacentHTML("beforeend", $tablePeople);
+        const $tablePeople = createTablePeople();
+        const $peopleItem = createPeopleItem(data.results);
+        $tablePeople.insertAdjacentElement("beforeend", $peopleItem);
+        $tableWrapper.insertAdjacentElement("beforeend", $tablePeople);
     } catch {
         alert("Falha no carregamento. Tente mais tarde!")
     }    

@@ -9,7 +9,7 @@
 }
 
 .table-people_thead tr{
-    background-color: #ccc;
+    background-color: #f0f0f0;
     color:#2e2f34;
 }
 
@@ -31,10 +31,6 @@
     border-left: 1px solid #000;
     vertical-align: middle;
 } 
-
-.table-people_column .image {
-    border-radius: 5px;
-}
 
 @media(max-width: 75rem){
     .table-people {
@@ -66,6 +62,14 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         white-space: nowrap;
+    }
+
+    .table-people tbody tr {
+        display: inline-block;
+    }
+
+    .table-people tbody tr + tr{
+        border-left: 1px solid #2e2f34;
     }
 
     .table-people_line,
