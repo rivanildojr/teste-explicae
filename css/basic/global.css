@@ -2,7 +2,7 @@ body {
     background-color: #2E2F34;
 }
 
-#root, #roulette, #form {
+#root, #roulette, #form, #people {
     display: flex;
     justify-content: center;
     align-items: center;

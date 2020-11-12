@@ -5,5 +5,10 @@
     cursor: pointer;
     border: none;
     border-radius: 1rem;
+}
 
+.button-home:focus,
+.button-home:hover {
+    background-color: #C26246;
+    color: #fff;
 }

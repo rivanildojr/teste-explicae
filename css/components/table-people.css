@@ -1,0 +1,75 @@
+.table-people {
+    background-color: #C26246;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    color: #fff;
+    width: 30%;
+    margin-bottom: 1rem;
+    border-collapse: initial;
+}
+
+.table-people_thead tr{
+    background-color: #ccc;
+    color:#2e2f34;
+}
+
+.table-people_line {
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.table-people th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.table-people th:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.table-people_column {
+    padding: 1rem;
+    border-left: 1px solid #000;
+    vertical-align: middle;
+} 
+
+.table-people_column .image {
+    border-radius: 5px;
+}
+
+@media(max-width: 75rem){
+    .table-people {
+        display: block;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .table-people thead,
+    .table-people tbody,
+    .table-people th,
+    .table-people td,
+    .table-people tr {
+        display: block;
+    }
+
+    .table-people thead {
+        float: left;
+    }
+
+    .table-people td,
+    .table-people th {
+        height: 2rem;
+    }
+
+    .table-people tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+
+    .table-people_line,
+    .table-people_column {
+        border: none;
+    }
+}
