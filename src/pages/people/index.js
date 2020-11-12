@@ -18,18 +18,13 @@ const {url, options} = USER_GET();
 const getUser = async () => {
     const dataResponse = await fetch(url, options);
     const dataJson = await dataResponse.json();
-    console.log("dataJson:", dataJson);
     if(dataResponse.ok) return dataJson;
     throw Error(dataJson.message)
 }
 
 const generateTable = async () => {
     try {
-        const data = await getUser();
-        console.log("data", data);
-        console.log("results", data.results);
-        console.log("results asa: ", {...data.results[0]});
-       
+        const data = await getUser();       
         const $tablePeople = createTablePeople({...data.results[0]});
         $tableWrapper.insertAdjacentHTML("beforeend", $tablePeople);
     } catch {

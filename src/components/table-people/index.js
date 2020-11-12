@@ -1,5 +1,4 @@
 const createTablePeople = (data) => {
-    console.log("data: ", data.gender)
     return`
         <table class="table-people">
             <thead class="table-people_thead">

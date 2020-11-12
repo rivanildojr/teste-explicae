@@ -23,5 +23,3 @@ const generateArrayRandonAscending = () => {
     let arrayNumber = generateArrayRandon();
     return sortAscending(arrayNumber);
 }
-
-console.log(generateArrayRandonAscending());
