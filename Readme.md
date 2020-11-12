@@ -11,6 +11,10 @@
   2. Entre na pasta rodando `cd teste-explicae`;
   3. Abra no navegador o arquivo `index.html`;
 
+## URL do projeto
+
+  - [teste-explicae](https://teste-explicae.rivanildojr.vercel.app/ "Clique para acessar!")
+
 ## Metodologias utilizada
   - ITCSS
   - BEM
