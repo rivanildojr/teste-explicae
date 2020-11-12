@@ -1,0 +1,17 @@
+.textArea-form {
+    width: 70%;
+    height: 20rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: #2e2f34;
+    font-size: 1rem;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+}
+
+@media(max-width: 40rem) {
+    .textArea-form {
+        width: 90%;
+    }
+}

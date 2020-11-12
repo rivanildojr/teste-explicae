@@ -1,0 +1,14 @@
+.form-group_label {
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.form-group_input {
+    color: #fff;
+}
+
+@media(max-width: 38rem) {
+    .form-group_input {
+        margin-top: 1rem;
+    }
+}

@@ -24,3 +24,9 @@
         width: 80%;
     }
 }
+
+@media(max-width: 38rem) {
+    .title {
+        font-size: 2rem;
+    }
+}
